@@ -11,6 +11,7 @@ const Navbar = () => {
 
     return (
         <>
+            
             <nav className="bg-white flex-shrink-0  justify-between font-bold lg:text-2xl">
                 <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-0">
                     <div className="flex items-center justify-between h-16">
@@ -23,13 +24,13 @@ const Navbar = () => {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-4 flex items-center space-x-4">
-                                <a href="" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                <a href="/" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
                                     Home
                                 </a>
-                                <a href="" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                <a href="../Projects" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
                                     Projects
                                 </a>
-                                <a href="" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                <a href="../About" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
                                     About
                                 </a>
                                
@@ -72,13 +73,13 @@ const Navbar = () => {
                 {isClick && (
                     <div className="md:hidden transition duration-300 ease-in-out">
                         <div className="px-4 pt-2 pb-3 items-center space-y-1 sm:px-3">
-                            <a href="" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
+                            <a href="/" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
                                 Home
                             </a>
-                            <a href="" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
+                            <a href="../Projects" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
                                 Projects
                             </a>
-                            <a href="" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
+                            <a href="../About" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
                                 About
                             </a>
                             
