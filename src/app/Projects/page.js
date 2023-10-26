@@ -2,45 +2,19 @@ import Image from "next/image"
 import cuyanimelist from "@/app/Projects/cuyanimelist.png"
 import sisrekjur from "@/app/Projects/sisrekjur.png"
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const Projects = () => {
     return (
         <>
             <Navbar />
-            <section className="pt-16 lg:px-28">
+            <section id="" className="pt-16 lg:px-28">
                 <div className="flex flex-wrap">
                     <div className="w-full mb-4 lg:mb-10 px-4">
                         <h1 className="lg:text-center font-bold text-2xl lg:text-4xl uppercase font-sans">Projects</h1>
+                        <p className="text-center text-base lg:text-lg -mb-4">Here are some of the projects I've worked on</p>
                     </div>
                 </div>
-
-                {/* <div className="container flex justify-center  border mb-6">
-                        <Image
-                            src={cuyanimelist}
-                            width={450}
-                            height={0}
-                            className="max-w-full max-h-full object-cover"
-                        />
-
-                        <div className=" w-full lg:w-1/2 border">
-                            <div className="w-full col-span-2 lg:col-span-1 lg:px-20">
-                                <h1 className="font-bold text-xl mt-8 mb-4 uppercase">CuyAnimeList</h1>
-                                <p className="mb-6">Website berisi list anime yang menggunakan API dari Jiken,
-                                    memakai Next JS sebagai web framework dan Tailwind CSS sebagai UI Framework</p>
-                                <div className="flex items-center flex-wrap gap-8 mt-2 mb-10 lg:mb-20">
-                                    <div class="bg-[#E5E7EB] dark:bg-[#374151] rounded-[12px] py-[4px] px-[20px] w-min whitespace-nowrap">React</div>
-                                    <div class="bg-[#E5E7EB] dark:bg-[#374151] rounded-[12px] py-[4px] px-[20px] w-min whitespace-nowrap">Node JS</div>
-                                    <div class="bg-[#E5E7EB] dark:bg-[#374151] rounded-[12px] py-[4px] px-[20px] w-min whitespace-nowrap">Tailwind Css</div>
-                                </div>
-                                <div className="flex gap-14">
-                                <a href="https://github.com/shoburfp/cuyanimelist" target="_blank" className="text-base text-secondary font-bold hover:text-pink-600">Github</a>
-                                <a href="https://scnimelist.vercel.app/" target="_blank" className="text-base text-secondary font-bold hover:text-pink-600">Live Preview👉</a>
-                                </div>
-                            </div>
-                        </div>
-                </div> */}
-
-               
 
                 <div className="container  mb-8 px-4 lg:px-8 lg:mx-auto">
                     <div className="border shadow-xl px-8">
@@ -49,6 +23,7 @@ const Projects = () => {
                                 src={sisrekjur}
                                 width={450}
                                 height={0}
+                                alt="sisrekjur"
                                 className="max-w-full max-h-full object-cover mt-6"
                             />
                             <div className="px-4 lg:px-20">
@@ -66,7 +41,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                </div>
+                    </div>
                 </div>
 
                 <div className="container   mb-8 px-4 lg:px-8 lg:mx-auto">
@@ -90,14 +65,15 @@ const Projects = () => {
                                 src={cuyanimelist}
                                 width={450}
                                 height={0}
+                                alt="cuyanimelist"
                                 className="max-w-full max-h-full object-cover"
                             />
                         </div>
                     </div>
                 </div>
+                <Footer />
 
-               
-              
+
             </section>
         </>
     )

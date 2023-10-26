@@ -1,5 +1,7 @@
 "use client"
+import Link from "next/link";
 import React, { useState } from "react"
+
 
 const Navbar = () => {
 
@@ -12,8 +14,9 @@ const Navbar = () => {
     return (
         <>
             
-            <nav className="bg-white flex-shrink-0  justify-between font-bold lg:text-2xl">
-                <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-0">
+            <header className="navbar-fixed sticky top-0 backdrop-blur-sm bg-white justify-between font-bold lg:text-2xl">
+                {/* <section className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-0"> */}
+                    <section className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">
                             <div className="flex">
@@ -24,13 +27,16 @@ const Navbar = () => {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-4 flex items-center space-x-4">
-                                <a href="/" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                <Link href="../#Home" className="text-black hover:bg-secondary hover:text-white rounded-lg p-2">
                                     Home
-                                </a>
-                                <a href="../Projects" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                    </Link>
+                                {/* <a href="/" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                    Home
+                                </a> */}
+                                <Link href="../#Projects" className="text-black hover:bg-secondary hover:text-white rounded-lg p-2">
                                     Projects
-                                </a>
-                                <a href="../About" className="text-black hover:bg-light hover:text-white rounded-lg p-2">
+                                </Link>
+                                <a href="../#About" className="text-black hover:bg-secondary hover:text-white rounded-lg p-2">
                                     About
                                 </a>
                                
@@ -39,7 +45,7 @@ const Navbar = () => {
                         <div className="md:hidden flex items-center">
                             <button className="inline-flex items-center justify-between p-2 rounded-md text-black
                             md:text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black
-                            transition duration-300 ease-in-out"
+                            transition duration-1000 ease-in-out"
                                 onClick={toggleNavbar}>
                                 {isClick ? (
                                     <svg className="h-6 w-6 transition duration-300 ease-in-out"
@@ -69,24 +75,25 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </section>
                 {isClick && (
-                    <div className="md:hidden transition duration-300 ease-in-out">
-                        <div className="px-4 pt-2 pb-3 items-center space-y-1 sm:px-3">
-                            <a href="/" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
+                    <div className="md:hidden transition duration-1000 ease-in-out">
+                        <div className="px-4 pt-2 pb-3 items-center space-y-1 sm:px-3 transition duration-1000 ease-in-out">
+                            <a href="../#Home" className="text-black block hover:bg-secondary hover:text-white rounded-lg p-2">
                                 Home
                             </a>
-                            <a href="../Projects" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
+                            <a href="../#Projects" className="text-black block hover:bg-secondary hover:text-white rounded-lg p-2">
                                 Projects
                             </a>
-                            <a href="../About" className="text-black block hover:bg-light hover:text-white rounded-lg p-2">
+                            <a href="../#About" className="text-black block hover:bg-secondary hover:text-white rounded-lg p-2">
                                 About
                             </a>
                             
                         </div>
                     </div>
                 )}
-            </nav>
+            </header>
+         
         </>
     )
 }

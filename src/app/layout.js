@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import './globals.css'
 import { Gabarito } from 'next/font/google'
 
@@ -10,8 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={gabarito.className}>{children}</body>
+    <html lang="en" className="scroll-smooth focus:scroll-auto">
+      <body className="{gabarito.className} bg-white">{children}</body>
+      <Script src="../components/Navbar/script.js"/>
     </html>
   )
 }
